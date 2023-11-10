@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="..\data\css\style.css" rel="stylesheet" type="text/css">
+  
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 offset-md-1">
+                <div class="overlay text-left">
+                    <h1 class="pregunta">PREGUNTA 2</h1>
+                    <p>Pedro ha estado llegando tarde con frecuencia afectado la proactividad del equipo.
+                        ¿Cómo abordas la situación?</p>
+                </div>
+                <div class="d-grid gap-2 col-12 justify-conten-center mx-auto">
+                    <span class="badge bg-primary-subtle border border-primary-subtle rounded-pill btn-sm mb-3"  onclick="enviarRespuesta(2);">
+                        <img class="rounded-circle me-1" width="60" height="60" src="..\data\img\P12.png">Tienes una conversación privada con él para entender las 
+                        razones detrás de su tardanza y explorar soluciones. 
+                      </span>
+                      <span class="badge bg-primary-subtle border border-primary-subtle rounded-pill btn-sm mb-3" onclick="enviarRespuesta(1);">
+                        <img class="rounded-circle me-1" width="60" height="60" src="..\data\img\P22.png">Lo amenaza con despedirlo si no mejora su puntualidad de 
+                        inmediato. 
+                      </span> 
+                      <span class="badge bg-primary-subtle border border-primary-subtle rounded-pill btn-sm mb-3" onclick="enviarRespuesta(3);">
+                        <img class="rounded-circle me-1" width="60" height="60" src="..\data\img\P32.png">Ignoras la situación y esperas que mejore por sí sola. 
+                      </span>
+                </div>
+            </div>
+            <div>
+                <picture>
+                    <source media="(max-width: 320px)" srcset="..\data\img\PantallaMovil.jpg">
+                    <source media="(max-width: 375px)" srcset="..\data\img\PantallaMovil.jpg">
+                    <source media="(max-width: 425px)" srcset="..\data\img\PantallaMovil.jpg">
+                    <source media="(max-width: 768px)" srcset="..\data\img\Portadillasinnube.jpg">
+                    <source media="(max-width: 1024px)" srcset="..\data\img\Portadillasinnube.jpg">
+                    <source media="(max-width: 1440px)" srcset="..\data\img\Portadillasinnube.jpg">
+                    <img src="..\data\img\Portadillasinnube.jpg" alt="Imagen de portada" class="img-fluid">
+                </picture>
+            </div>
+        </div>
+        <script>
+            function enviarRespuesta(puntos) {
+                localStorage.setItem('resultado2', puntos);
+                window.location.href = 'PREGUNTA 3.html';
+            }
+        </script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
