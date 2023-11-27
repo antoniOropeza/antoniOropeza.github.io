@@ -1,55 +1,373 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liderazgo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <title>LIDERAZGO</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="..\data\css\style.css" rel="stylesheet" type="text/css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+               body {
+            background-image: url('../data/img/Liderazgoconnube.gif'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        } 
+        .texto-centrado {
+            text-align:center;
+            font-family: 'Monserrat Bold' ,sans-serif;
+            text-align: justify;
+             
+        }
+
+@media(min-width:375px){
+    body {
+            background-image: url('../data/img/LiderazgoMOVILconnubeok.gif'); 
+            background-size: contain;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+         
+        }
+    #deacuerdo{
+      margin-left: 30px;
+      margin-bottom: -250px;
+      cursor: pointer;
+      padding: .1px 20px;
+      font-size: 20px;
+      font-family: 'Monserrat Bold', sans-serif;
+      border: none;
+      text-decoration: none;   
+     
+    }
+    #texto{
+        font-size: 10px;
+        margin-top: 90px;
+        margin-left: -20px;
+        margin-right: -5px;
+        font-family: 'Monserrat Bold' ,sans-serif;
+        text-align: justify;
+    }
+}
+
+@media (min-width:320px){ 
+    body {
+            background-image: url('../data/img/LiderazgoMOVILconnubeok.gif'); 
+            background-size: contain;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+    #deacuerdo{
+      margin-left: 10px;
+      margin-bottom: -230px;
+      background-color: #455A64;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      padding: .1px 20px;
+      font-size: 20px;
+      font-family: 'Monserrat Bold', sans-serif;
+      border: none;
+      text-decoration: none;   
+    }
+    #texto{
+        font-size: 15px;
+        margin-bottom: -80px;
+        margin-right: 90px;
+        margin-left:10px;
+        font-family: 'Monserrat Bold' ,sans-serif;
+        text-align: justify;
+    }
+}
+
+@media(min-width:600px){
+    body {
+            background-image: url('../data/img/../data/img/Liderazgoconnube.gif'); 
+            background-size: contain;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+    #deacuerdo{
+      margin-left: 60px;
+      margin-bottom: -380px;
+      background-color: #455A64;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      padding: .1px 20px;
+      font-size: 20px;
+      font-family: 'Monserrat Bold', sans-serif;
+      border: none;
+      text-decoration: none;   
+    }
+    #texto{
+        font-size: 13px;
+        margin-top: -160px;
+        margin-left: 60px;
+        margin-right: 60px;
+        font-family: 'Monserrat Bold' ,sans-serif;
+        text-align: justify;
+    }
+}
+
+@media(min-width:768px){
+    body {
+            background-image: url('../data/img/Liderazgoconnube.gif'); 
+            background-size: contain;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+    #deacuerdo{
+      margin-left: 220px;
+      margin-bottom: -180px;
+      background-color: #455A64;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      padding: .1px 20px;
+      font-size: 20px;
+      font-family: 'Monserrat Bold', sans-serif;
+      border: none;
+      text-decoration: none;   
+    }
+    #texto{
+        font-size: 11px;
+        margin-top: -10px;
+        margin-left: 50px;
+        margin-right: 295px;
+        font-family: 'Monserrat Bold' ,sans-serif;
+        text-align: justify;
+    }
+}
+
+@media(min-width:1024px){
+    body {
+            background-image: url('../data/img/Liderazgoconnube.gif'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+    #deacuerdo{
+      margin-left: 250px;
+      margin-bottom: -200px;
+      background-color: #455A64;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      padding: .1px 20px;
+      font-size: 30px;
+      font-family: 'Monserrat Bold', sans-serif;
+      border: none;
+      text-decoration: none;   
+    }
+    #texto{
+        font-size: 15px;
+        margin-top: -50px;
+        margin-left: 70px;
+        margin-right: 450px;
+        font-family: 'Monserrat Bold' ,sans-serif;
+        text-align: justify;
+    }
+}
+
+@media(min-width:1440px){
+    body {
+            background-image: url('../data/img/Liderazgoconnube.gif'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+    #deacuerdo{
+      margin-left: 450px;
+      margin-bottom: -340px;
+      background-color: #455A64;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      padding: .1px 20px;
+      font-size: 30px;
+      font-family: 'Monserrat Bold', sans-serif;
+      border: none;
+      text-decoration: none;   
+    }
+    #texto{
+        font-size: 20px;
+        margin-top: -50px;
+        margin-left: 140px;
+        margin-right: 600px;
+        font-family: 'Monserrat Bold' ,sans-serif;
+        text-align: justify;
+        
+    }
+}
+
+@media(min-width:1920px){
+     body {
+            background-image: url('../data/img/Liderazgoconnube.gif'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+    #deacuerdo{
+      margin-left: 550px;
+      margin-bottom: -540px;
+      background-color: #455A64;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      padding: .1px 20px;
+      font-size: 40px;
+      font-family: 'Monserrat Bold', sans-serif;
+      border: none;
+      text-decoration: none;   
+    }
+    #texto{
+        font-size: 22px;
+        margin-top: -50px;
+        margin-left: 200px;
+        margin-right: 800px;
+        font-family: 'Monserrat Bold' ,sans-serif;
+        text-align: justify;
+        
+    }
+}
+
+@media(min-width:2560px){
+    body {
+            background-image: url('../data/img/Liderazgoconnube.gif'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+    #deacuerdo{
+      margin-left: 850px;
+      margin-bottom: -240px;
+      background-color: #455A64;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      padding: .1px 20px;
+      font-size: 55px;
+      font-family: 'Monserrat Bold', sans-serif;
+      border: none;
+      text-decoration: none;   
+    }
+    #texto{
+        font-size: 40px;
+        margin-top: -10px;
+        margin-left: 240px;
+        margin-right: 1000px;
+        font-family: 'Monserrat Bold' ,sans-serif;
+        text-align: justify;
+    }
+
+} 
+    </style>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row border">
-        <div class="col-12">
-            <picture>
-                <source media="(max-width: 320px)" srcset="..\data\img\PantallaMovil.jpg">
-                <source media="(max-width: 375px)" srcset="..\data\img\PantallaMovil.jpg">
-                <source media="(max-width: 425px)" srcset="..\data\img\PantallaMovil.jpg">
-                <source media="(max-width: 768px)" srcset="..\data\img\Portadillasinnube.jpg">
-                <source media="(max-width: 1024px)" srcset="..\data\img\Portadillasinnube.jpg">
-                <source media="(max-width: 1440px)" srcset="..\data\img\Portadillasinnube.jpg">
-                <img id="portada1" src="..\data\img\Portadillasinnube.jpg" alt="Imagen de portada" class="img-fluid  background-image">
-            </picture>
-        </div>
-    </div>
-    <!-- <div class="row">
-        <div class="col-12 text-center">
-            <div class="circle">
-                <img id="Buho" src="..\data\img\Buho.gif" class="img-fluid">
+    <div class="container-fluid">
+        <div class="texto-centrado">
+            <p id="texto">Imagina que eres líder en una Dirección dentro del Instituto Mexicano del Seguro Social, que
+                tienes que entregar un trabajo muy importante y, para ello, cuentas con un equipo de trabajo.
+                <br><br>Han
+                estado trabajando duro para cumplir con un importante plazo de entrega de un proyecto. Uno de los
+                integrantes del equipo de trabajo, Pedro, ha estado enfrentando dificultades personales en casa y ha
+                estado llegando tarde al trabajo con regularidad durante las últimas semanas. Esto ha empezado a afectar
+                el progreso del proyecto y la moral del equipo.
+                <br><br>Ahora, te enfrentas a la tarea de abordar la
+                situación y tomar medidas para mantener el proyecto en marcha y apoyar a Pedro. Ten en cuenta esta
+                situación al responder las siguientes preguntas.
+            </p>
+            <div class="texto-right" id="boton-container" style="display: none;">
+                <a id="deacuerdo" href="PREGUNTA 1.html" class="btn btn-custom-color " role="button">¡De acuerdo!</a>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 text-center" id="imagenes">
-            <img id="inicioimagen" src="..\data\img\gifNubebuho.gif" class="img-fluid">
-            <img id="mantieneimagen" src="..\data\img\Buhohabla.gif" class="img-fluid">
-        </div> -->
-    </div>
-    <script src="script.js"></script>
-    <div class="row">
-        <div class="col-12">
-            <div class="parrafos" id="texto-container"></div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center">
-            <br>
-            <a class="nav-link btn btn-outline" href="PREGUNTA 1.html" style="color: white;">¡De acuerdo!</a>
-        </div>
-    </div>
-</div>
+    
+    <script>
+        function mostrarLetras() {
+            var textoElemento = document.getElementById("texto");
+            var textoOriginal = textoElemento.textContent;
+            var letras = textoOriginal.split("");
+            var textoMostrado = "";
+            var i = 0;
+    
+            function mostrarSiguienteLetra() {
+                textoMostrado += letras[i];
+                textoElemento.textContent = textoMostrado;
+                i++;
+    
+                if (i < letras.length) {
+                    setTimeout(mostrarSiguienteLetra, 5); // Ajusta el tiempo de retraso aquí (en milisegundos)
+                } else {
+                    textoElemento.textContent = textoOriginal; // Restaura el contenido original
+                    document.getElementById("boton-container").style.display = "block";
+                }
+            }
+    
+            mostrarSiguienteLetra();
+        }
+    
+        window.onload = function () {
+            mostrarLetras();
+        };
+    </script>
+    
+  
 </body>
+
 </html>
