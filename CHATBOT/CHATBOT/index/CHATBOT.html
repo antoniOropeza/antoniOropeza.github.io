@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="..\data\css\style.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #chat-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #DDE1E3;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          
+        }
+
+        #chatbox {
+            padding: 20px;
+            max-height: 800px;
+            overflow-y: scroll;
+           
+        }
+
+        #user-input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 0 10px;
+            border: none;
+            border-top: 1px solid #ddd;
+            outline: none;
+        }
+
+        .message {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        .bot-message {
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .message img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chatbox" class="border-bottom">
+            <div class="message bot-message">¡Hola! soy 🤖SicaBot, tu asistente virtual de la plataforma SICAVIQA - IMSS.</div>
+            <div class="message bot-message">Estos son algunos de los temas con los que te puedo ayudar. 👍*Da clic en las flechas laterales para ver todas las opciones*</div>
+            <div class="message bot-message"> <img id="primeimg" src='../data/img/1-01.jpg' alt='Primera Imagen del chatbot'><br> INSCRIPCION <br> 👉Recuerda utilizar el navegador Google Chrome para evitar problemas con la plataforma.👈</div>
+            <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarInscripcionInfo()">¿Cómo inscribirme? 🤔</a><br>
+            <a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button">Inscríbete aquí ▶️</a><br>
+            <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarFechas()">Fechas📆</a>
+            <div class="message bot-message"><img  id="segundaimg" src='../data/img/contraseñas.jpg' alt='Segunda Imagen del chatbot'> <br> USUARIOS / CONTRASEÑAS <br>👉Es importante que sepas que el único medio válido por donde te haremos llegar tus datos de acceso es por el correo institucional:👈<br>
+            <a href="mailto:avisos.capacitacion@imss.gob.mx">avisos.capacitacion@imss.gob.mx</a></p>
+            <a id="efectobtn" class="btn btn-custom-color btn-block " role="button">Invitación 📧</a><br>
+            <a id="efectobtn" class="btn btn-custom-color btn-block" role="button">Acceso 🔐</a><br>
+            <a id="efectobtn" class="btn btn-custom-color btn-block" role="button">Evaluación✍️</a>
+            </div>
+            </div>
+           
+            <div id="como-inscribirme" class="message bot-message" style="display: none;">🔴 No necesitas ingresas tu usuario ni contraseña para poder inscribirte.</div>
+            <div id="como-inscribirme2" class="message bot-message" style="display: none;">Llena el formulario en su totalidad. 📝 Todos los datos son indispensables y deben ser escritos correctamente para que no sean descartado por el sistema.<br>🚩Tu CORREO es el dato más importante para poder contactarte al momento de enviarte tu usuario y contraseña.🚩</div>
+            <div id="como-inscribirme3" class="message bot-message" style="display: none;">Para inscribirte, da clic aquí. 👇<br>
+            <a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button">Inscríbete aquí ▶️</a><br></div>
+            <a id="efectobtn-regresar" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Regresar al MENÚ ↩️</a>
+
+        
+            
+        
+
+            <div id="fechas" class="message bot-message" style="display: none;" >🔴PERIODO DE INSCRIPCIÓN<br>
+                Tienes entre el 1ro y el penúltimo día de este mes para postularte a uno o hasta 4 cursos de SICAVI.
+                </div>
+            <div id="fechas2" class="message bot-message" style="display: none;">▶️ ¿CUÁNDO INICIA MI CURSO?<br>
+                Inicia siempre el mes posterior al de tu inscripción y finaliza en el último día hábil del mes a las 🕛12:00 pm.</div>
+            <div id="fechas3" class="message bot-message" style="display: none;">🔐¿CUÁNDO ME LLEGAN MI USUARIO Y CONTRASEÑA?<br>
+                El 5to día hábil del mes siguiente a tu inscripción.
+            </div>
+            <div id="fechas4" class="message bot-message" style="display: none;">No tomé mi capacitación durante el mes programado.<br><a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarQueHago()">¿Qué hago?</a></div>
+            
+            <a id="efectobtn-regresar2" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Mi problema es otro↩️</a><br><br>
+            <a id="efectobtn-fin" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Resolví mi duda😀</a>
+
+            <div id="quehago" class="message bot-message" style="display: none;">⚠️Tendrás que inscribirte para el siguiente periodo.⚠️</div>
+            <div id="quehago2" class="message bot-message" style="display: none;">📝 Para inscribirte:<br><a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button">👉haz clic aquí</a></div>
+
+            <div id="resuelto" class="message bot-message" style="display: none;">🤖 Me es grato saber que te pude ayudar, que tengas un buen día y ¡Sigue capacitándote!</div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        // Función para enviar mensajes iniciales del chatbot
+        function sendInitialMessages() {
+            
+            var chatbox = document.getElementById("chatbox");
+
+            initialMessages.forEach(function(message) {
+                chatbox.innerHTML += "<div class='message bot-message'>" + message + "</div>";
+            });
+
+            // Desplazarse hasta el final del chat
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        // Llamada a la función cuando se carga la página
+        window.onload = function() {
+            sendInitialMessages();
+        };
+
+        function getResponse() {
+            var user_input = document.getElementById("user-input").value;
+            var chatbox = document.getElementById("chatbox");
+
+            chatbox.innerHTML += "<div class='message user-message'>" + user_input + "</div>";
+
+            fetch("/get_response", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: "user_input=" + user_input,
+            })
+            .then(response => response.json())
+            .then(data => {
+                chatbox.innerHTML += "<div class='message bot-message'>" + data.response + "</div>";
+            });
+
+            document.getElementById("user-input").value = "";
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+    </script>
+
+<script>
+    function mostrarInscripcionInfo() {
+        // Oculta la sección principal del menú (chatbox)
+        document.getElementById('chatbox').style.display = 'none';
+        
+        // Muestra la sección de inscripcion-info
+        document.getElementById('como-inscribirme').style.display = 'block';
+        document.getElementById('como-inscribirme2').style.display = 'block';
+        document.getElementById('como-inscribirme3').style.display = 'block';
+
+        // Muestra el botón "Regresar al MENÚ ↩️"
+        document.getElementById('efectobtn-regresar').style.display = 'block';
+    }
+
+    function regresarAlMenu() {
+        // Oculta la sección de inscripcion-info
+        document.getElementById('como-inscribirme').style.display = 'none';
+        document.getElementById('como-inscribirme2').style.display = 'none';
+        document.getElementById('como-inscribirme3').style.display = 'none';
+        
+        // Muestra la sección principal del menú (chatbox)
+        document.getElementById('chatbox').style.display = 'block';
+
+        // Oculta el botón "Regresar al MENÚ ↩️"
+        document.getElementById('efectobtn-regresar').style.display = 'none';
+    }
+</script>
+
+<script>
+       function mostrarFechas() {
+        document.getElementById('chatbox').style.display = 'none';
+        
+        // Oculta otros mensajes y muestra el mensaje de inscripción
+        document.getElementById('fechas').style.display = 'block';
+        document.getElementById('fechas2').style.display = 'block';
+        document.getElementById('fechas3').style.display = 'block';
+        document.getElementById('fechas4').style.display = 'block';
+
+         // Muestra el botón "Regresar al MENÚ ↩️"
+         document.getElementById('efectobtn-regresar2').style.display = 'block';
+         document.getElementById('efectobtn-fin').style.display ='block';
+
+        function regresarAlMenu() {
+        // Oculta la sección de inscripcion-info
+        document.getElementById('como-inscribirme').style.display = 'none';
+        document.getElementById('como-inscribirme2').style.display = 'none';
+        document.getElementById('como-inscribirme3').style.display = 'none';
+        
+        // Muestra la sección principal del menú (chatbox)
+        document.getElementById('chatbox').style.display = 'block';
+
+        // Oculta el botón "Regresar al MENÚ ↩️"
+        document.getElementById('efectobtn-regresar2').style.display = 'none';
+        document.getElementById('efectobtn-fin').style.display ='none';
+    }
+      
+         
+    }
+</script>
+<script>
+    function mostrarQueHago() {
+        // Oculta la sección de fechas
+        document.getElementById('fechas').style.display = 'none';
+        document.getElementById('fechas2').style.display = 'none';
+        document.getElementById('fechas3').style.display = 'none';
+        document.getElementById('fechas4').style.display = 'none';
+
+        // Muestra la sección de "¿Qué hago?"
+        document.getElementById('quehago').style.display = 'block';
+        document.getElementById('quehago2').style.display = 'block';
+    }
+</script>
+<script>
+    function mostrarResuelto(){
+        document.getElementById('fechas').style.display = 'none';
+        document.getElementById('fechas2').style.display = 'none';
+        document.getElementById('fechas3').style.display = 'none';
+        document.getElementById('fechas4').style.display = 'none';
+        // Oculta otros mensajes y muestra el mensaje de inscripción
+        document.getElementById('resuelto').style.display = 'block';
+        // Puedes ocultar otros mensajes aquí si es necesario
+    }
+</script>
+
+</body>
+</html>

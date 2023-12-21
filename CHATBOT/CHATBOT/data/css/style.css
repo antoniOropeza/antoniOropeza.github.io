@@ -1,0 +1,33 @@
+.btn-custom-color{
+  background-color: #EEEFF0;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Monserrat' ,sans-serif;
+  text-decoration: none;
+}
+
+.btn-custom-color2{
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50px;
+  font-family: 'Monserrat' ,sans-serif;
+  text-decoration: none;
+  float:right;
+}
+
+#primeimg{
+  width: 450px;
+  height: 250px;
+}
+
+#segundaimg{
+  width: 450px;
+  height: 250px;
+}
+
+#efectobtn:hover {
+  background-color:#B0D6FC; /* Cambia el color de fondo al pasar el cursor */
+}
