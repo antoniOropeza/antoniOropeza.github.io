@@ -7,6 +7,7 @@
   <title>Document</title>
 </head>
 <body>
+  <p id="dimensionesPantalla"></p><br>
   <H2>
     <a href="CASO DE ESTUDIO/index/PORTADA.html">Caso Práctico</a>
     <br>
@@ -14,5 +15,16 @@
     <br>
     <a href="CHATBOT/CHATBOT/index/CHATBOT.html">CHATBOT</a>
   </H2>
+  <script>
+    
+    function actualizarDimensiones() {
+        var anchoPantalla = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var altoPantalla = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        document.getElementById("dimensionesPantalla").textContent = anchoPantalla + "x" + altoPantalla;
+    }
+    window.onload = actualizarDimensiones;
+    window.onresize = actualizarDimensiones;
+</script>
 </body>
 </html>
