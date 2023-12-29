@@ -1,3 +1,53 @@
+body {
+  font-family: 'Monserrat', sans-serif;
+}
+
+#chat-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #DDE1E3;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+#chatbox {
+  padding: 20px;
+  max-height: 800px;
+  overflow-y: scroll;
+ 
+}
+
+#user-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 0 10px;
+  border: none;
+  border-top: 1px solid #ddd;
+  outline: none;
+}
+
+.message {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.bot-message {
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  font-size: 20px;
+}
+
+.message img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin: 0 auto; /* Agrega esta línea para centrar la imagen */
+}
+
 .btn-custom-color{
   background-color: #EEEFF0;
   color: black;
@@ -18,16 +68,23 @@
   float:right;
 }
 
-#primeimg{
+#primeimg {
   width: 450px;
   height: 250px;
 }
 
-#segundaimg{
+#segundaimg {
   width: 450px;
   height: 250px;
 }
 
-#efectobtn:hover {
-  background-color:#B0D6FC; /* Cambia el color de fondo al pasar el cursor */
+#octavaimg {
+  max-width: 97%; 
 }
+
+#septimaimg {
+  width: 600px;
+  height: 600px;
+  max-width: 97%; /* Asegura que la imagen no supere el ancho máximo del contenedor */
+}
+
