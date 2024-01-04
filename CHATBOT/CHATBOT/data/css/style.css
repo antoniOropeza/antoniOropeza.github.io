@@ -2,7 +2,7 @@ body {
   font-family: 'Monserrat', sans-serif;
 }
 
-#chat-container {
+#ventana-chat{
   max-width: 800px;
   margin: 20px auto;
   background-color: #DDE1E3;
@@ -16,22 +16,16 @@ body {
   padding: 20px;
   max-height: 800px;
   overflow-y: scroll;
- 
-}
-
-#user-input {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin: 0 10px;
-  border: none;
-  border-top: 1px solid #ddd;
-  outline: none;
 }
 
 .message {
   padding: 20px;
   margin: 10px;
   border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: appear 1s ease-in-out forwards;
+
 }
 
 .bot-message {
@@ -45,7 +39,7 @@ body {
   max-width: 100%;
   border-radius: 8px;
   margin-top: 10px;
-  margin: 0 auto; /* Agrega esta línea para centrar la imagen */
+  margin: 0 auto;
 }
 
 .btn-custom-color{
@@ -85,6 +79,32 @@ body {
 #septimaimg {
   width: 600px;
   height: 600px;
-  max-width: 97%; /* Asegura que la imagen no supere el ancho máximo del contenedor */
+  max-width: 97%; 
 }
 
+@keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .message.delay-1,.delay-5,.delay-8,.delay-12,.delay-15,.delay-21,.delay-18,.delay-41, .delay-46,.delay-48,.delay-51,.delay-23, .delay-28, .delay-31,.delay-34{
+    animation-delay: 0.5s;
+  }
+
+  .message.delay-2, .delay-6,.delay-9,.delay-13,.delay-17,.delay-22,.delay-19,.delay-42,.delay-47,.delay-49,.delay-52,.delay-24,.delay-29,.delay-32,.delay-35{
+    animation-delay: 1.5s;
+  }
+
+  .message.delay-3, .delay-7,.delay-10,.delay-20, .delay-27,.delay-43, .delay-25,.delay-30,.delay-33{
+    animation-delay: 2.5s;
+  }
+
+  .message.delay-4,.delay-11,.delay-44 {
+    animation-delay: 3.5s;
+  }

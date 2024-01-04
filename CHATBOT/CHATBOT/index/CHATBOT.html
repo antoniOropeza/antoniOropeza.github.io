@@ -6,51 +6,60 @@
     <title>ChatBot</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="../data/css/style.css" rel="stylesheet" type="text/css">
-   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </head>
 <body>
-    <div id="chat-container">
+    <div id="ventana-chat" class="container-fluid">
         <div id="chatbox" class="border-bottom">
-            <div class="message bot-message">¡Hola! soy 🤖SicaBot, tu asistente virtual de la plataforma SICAVIQA - IMSS.</div>
-            <div class="message bot-message">Estos son algunos de los temas con los que te puedo ayudar. 👍*Da clic en las flechas laterales para ver todas las opciones*</div>
-            <div class="message bot-message"> <img id="primeimg" src='../data/img/1-01.jpg' alt='Primera Imagen del chatbot'><br> INSCRIPCION <br> 👉Recuerda utilizar el navegador Google Chrome para evitar problemas con la plataforma.👈
+            <div class="message bot-message delay-1">¡Hola! soy 🤖SicaBot, tu asistente virtual de la plataforma SICAVIQA - IMSS.</div>
+            <div class="message bot-message delay-2">Estos son algunos de los temas con los que te puedo ayudar. 👍*Da clic en las flechas laterales para ver todas las opciones*</div>
+            <div class="message bot-message delay-3"> <img id="primeimg" src='../data/img/1-01.jpg' alt='Primera Imagen del chatbot'><br> INSCRIPCION <br> 👉Recuerda utilizar el navegador Google Chrome para evitar problemas con la plataforma.👈
             <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarInscripcionInfo()">¿Cómo inscribirme? 🤔</a><br>
             <a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">Inscríbete aquí ▶️</a><br>
             <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarFechas()">Fechas📆</a>
             </div>
-            <div class="message bot-message"><img  id="segundaimg" src='../data/img/contraseñas.jpg' alt='Segunda Imagen del chatbot'><br> USUARIOS / CONTRASEÑAS <br>👉Es importante que sepas que el único medio válido por donde te haremos llegar tus datos de acceso es por el correo institucional:👈
+            <div class="message bot-message delay-4"><img  id="segundaimg" src='../data/img/contraseñas.jpg' alt='Segunda Imagen del chatbot'><br> USUARIOS / CONTRASEÑAS <br>👉Es importante que sepas que el único medio válido por donde te haremos llegar tus datos de acceso es por el correo institucional:👈
             <a href="mailto:avisos.capacitacion@imss.gob.mx">avisos.capacitacion@imss.gob.mx</a></p>
             <a id="efectobtn" class="btn btn-custom-color btn-block " role="button" onclick="mostrarInvitacion()">Invitación 📧</a><br>
             <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarAcceso()">Acceso 🔐</a><br>
             <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarEvaluacion()">Evaluación✍️</a>
             </div>
         </div>
-            <div id="como-inscribirme" class="message bot-message" style="display: none;">🔴 No necesitas ingresas tu usuario ni contraseña para poder inscribirte.</div>
-            <div id="como-inscribirme2" class="message bot-message" style="display: none;">Llena el formulario en su totalidad. 📝 Todos los datos son indispensables y deben ser escritos correctamente para que no sean descartado por el sistema.<br>🚩Tu CORREO es el dato más importante para poder contactarte al momento de enviarte tu usuario y contraseña.🚩</div>
-            <div id="como-inscribirme3" class="message bot-message" style="display: none;">Para inscribirte, da clic aquí. 👇<br>
+            <div id="como-inscribirme" class="message bot-message delay-5" style="display: none;">🔴 No necesitas ingresas tu usuario ni contraseña para poder inscribirte.</div>
+            <div id="como-inscribirme2" class="message bot-message delay-6" style="display: none;">Llena el formulario en su totalidad. 📝 Todos los datos son indispensables y deben ser escritos correctamente para que no sean descartado por el sistema.<br>🚩Tu CORREO es el dato más importante para poder contactarte al momento de enviarte tu usuario y contraseña.🚩</div>
+            <div id="como-inscribirme3" class="message bot-message delay-7" style="display: none;">Para inscribirte, da clic aquí. 👇<br>
             <a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">Inscríbete aquí ▶️</a><br></div>
-            <a id="regresar" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Regresar al MENÚ ↩️</a>
-            <div id="fechas" class="message bot-message" style="display: none;" >🔴PERIODO DE INSCRIPCIÓN<br>
+            <div id="fechas" class="message bot-message delay-8" style="display: none;" >🔴PERIODO DE INSCRIPCIÓN<br>
                 Tienes entre el 1ro y el penúltimo día de este mes para postularte a uno o hasta 4 cursos de SICAVI.</div>
-            <div id="fechas2" class="message bot-message" style="display: none;">▶️ ¿CUÁNDO INICIA MI CURSO?<br>
+            <div id="fechas2" class="message bot-message delay-9" style="display: none;">▶️ ¿CUÁNDO INICIA MI CURSO?<br>
                 Inicia siempre el mes posterior al de tu inscripción y finaliza en el último día hábil del mes a las 🕛12:00 pm.</div>
-            <div id="fechas3" class="message bot-message" style="display: none;">🔐¿CUÁNDO ME LLEGAN MI USUARIO Y CONTRASEÑA?<br>
+            <div id="fechas3" class="message bot-message delay-10" style="display: none;">🔐¿CUÁNDO ME LLEGAN MI USUARIO Y CONTRASEÑA?<br>
                 El 5to día hábil del mes siguiente a tu inscripción.</div>
-            <div id="fechas4" class="message bot-message" style="display: none;">No tomé mi capacitación durante el mes programado.<br><a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarQueHago()">¿Qué hago?</a></div>
-            <a id="regresar2" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Mi problema es otro↩️</a><br><br>
-            <a id="fin" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Resolví mi duda😀</a>
-            <div id="quehago" class="message bot-message" style="display: none;">⚠️Tendrás que inscribirte para el siguiente periodo.⚠️</div>
-            <div id="quehago2" class="message bot-message" style="display: none;">📝 Para inscribirte:<br><a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">👉haz clic aquí</a></div>
-            <a id="fin10" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Resolvi mi duda😀</a><br><br>
-            <a id="regresar9" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Regresar al MENÚ ↩️</a>
-            <div id="resuelto" class="message bot-message" style="display: none;">🤖 Me es grato saber que te pude ayudar, que tengas un buen día y ¡Sigue capacitándote!</div>
-            <img class="message bot-message" style="display: none;" id="octavaimg" src="../data/img/CHATBOT_DESPEDIDA-01.jpg">
-            <div id="invitacion" class="message bot-message" style="display: none;">No me llegó mi correo de invitación.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarQueHagoInvitacion()">¿Qué hago?</a></div>
-            <div id="quehagoinvitacion" class="message bot-message" style="display: none;">¿Te inscribiste?</div>
+            <div id="fechas4" class="message bot-message delay-11" style="display: none;">No tomé mi capacitación durante el mes programado.<br><a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarQueHago()">¿Qué hago?</a></div>
+            <div id="quehago" class="message bot-message delay-12" style="display: none;">⚠️Tendrás que inscribirte para el siguiente periodo.⚠️</div>
+            <div id="quehago2" class="message bot-message delay-13" style="display: none;">📝 Para inscribirte:<br><a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">👉haz clic aquí</a></div>
+            <div id="resuelto" class="message bot-message delay-14" style="display: none;"><img id="octavaimg" src="../data/img/CHATBOT_DESPEDIDA-01.jpg"></div>
+            <div id="invitacion" class="message bot-message delay-15" style="display: none;">No me llegó mi correo de invitación.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarQueHagoInvitacion()">¿Qué hago?</a></div>
+            <div id="quehagoinvitacion" class="message bot-message delay-16" style="display: none;">¿Te inscribiste?</div>
+            <div id="invitacion2" class="message bot-message delay-17" style="display: none;">Mis datos están mal.<br>
+                Ejemplo;
+                _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br>
+                🔸Nombre<br>
+                🔸Matricula<br>
+                🔸Correo
+            <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarReportar()">⚠️ Reportar ⚠️</a></div>
+            <div id="reportar" class="message bot-message delay-18" style="display: none;">Para contactarte directamente con nosotros y reportar la aclaración, comunícate al teléfono;<br>
+                📞 555629-0200 
+                a las extensiones;<br>
+                _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br>
+                 📌13070,  📌13091 o  📌13097<br>
+                _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ </div>
+            <img class="message bot-message delay-19" style="display: none;" id="septimaimg" src="../data/img/ranarene.gif">
+            <div id="invitacion3" class="message bot-message delay-20" style="display: none;">Me llegó una invitación por correo y yo no me inscribí.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarQueHagoInvitacion3()">¿Qué hago?</a></div>
             <a id="si" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarRespuestaSi()">Si✔️</a><br><br>
-            <div id="respuestasi" class="message bot-message" style="display: none;">Revisa el SPAM/Correo NO deseado.</div>
-            <div id="respuestasi2" class="message bot-message" style="display: none;">🔐Tu usuario es tu correo electronico hasta antes del arroba.<br>
-
+             <a id="no" class="btn btn-custom-color2" role="button" onclick="mostrarQueHago()" style="display: none;">No❌</a>
+            <div id="respuestasi" class="message bot-message delay-21" style="display: none;">Revisa el SPAM/Correo NO deseado.</div>
+            <div id="respuestasi2" class="message bot-message delay-22" style="display: none;">🔐Tu usuario es tu correo electronico hasta antes del arroba.<br>
              Ejemplo;<br>
              __________________________________________<br>
              Correo: bruno.diaz@imss.gob.mx<br>
@@ -58,111 +67,61 @@
              Usuario: bruno.diaz<br>
              Contraseña: Matricula/Curp<br>
              __________________________________________</div>
-             <div id="respuestasi3" class="message bot-message" style="display: none;">Verifica que ya sea el mes en el que llegará tu correo de invitación para tu capacitación.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarFechas()" >¿Dónde?</a></div>
-            <a id="no" class="btn btn-custom-color2" role="button" onclick="mostrarQueHago()" style="display: none;">No❌</a>
-            <div id="invitacion2" class="message bot-message" style="display: none;">Mis datos están mal.<br>
-                Ejemplo;
-                _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-                🔸Nombre<br>
-                🔸Matricula<br>
-                🔸Correo
-            <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarReportar()">⚠️ Reportar ⚠️</a></div>
-            <div id="reportar" class="message bot-message" style="display: none;">Para contactarte directamente con nosotros y reportar la aclaración, comunícate al teléfono;<br>
-                📞 555629-0200 
-                a las extensiones;<br>
-                _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br>
-                 📌13070,  📌13091 o  📌13097<br>
-                _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ </div>
-            <img class="message bot-message" style="display: none;" id="septimaimg" src="../data/img/ranarene.gif">
-            <a id="fin2" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Se solucionó ✔️</a><br><br>
-            <a id="regresar3" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;" >Tengo otro problema↩️</a>
-            <div id="invitacion3" class="message bot-message" style="display: none;">Me llegó una invitación por correo y yo no me inscribí.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarQueHagoInvitacion3()">¿Qué hago?</a></div>
-            <div id="quehagoinvitacion3" class="message bot-message" style="display: none;">Deberás tomar el curso y si tienes alguna duda, acércate a tu normativa de capacitación ya que ellos solicitaron inscribirte.</div>
-            <a id="fin3" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Resolví mi duda✔️</a>
-            <div id="acceso" class="message bot-message" style="display: none;">Te recordamos que estos cursos únicamente son para la plataforma institucional SICAVI-QA.<a id="efectobtn" href="https://sicaviqa.imss.gob.mx/" class="btn btn-custom-color btn-block" role="button" target="_blank">SICAVI</a></div>
-            <div id="acceso2" class="message bot-message" style="display: none;">▶️ No funciona mi usuario y contraseña.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarHazClicAqui()">👉haz clic aquí</a></div>
-            <div id="acceso3" class="message bot-message" style="display: none;">▶️ No puedo entrar a mi curso.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarHazClicAqui2()">👉haz clic aquí</a></div>
-            <div id="acceso4" class="message bot-message" style="display: none;">▶️ Quiero restablecer mi usuario y contraseña.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarHazClicAqui3()">👉haz clic aquí</a></div>
-            <div id="hazclicaqui" class="message bot-message" style="display: none;">Tus datos para accesar son enviados a través del correo: avisos.capacitacion@imss.gob.mx<img id="terceraimg" src='../data/img/Imagen14.png' alt='Tercera Imagen del chatbot' ></div>
-            <a id="correono"  class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarInfCorreoNo()">El correo es otro ❌</a><br>
-            <div id="infcorreono" class="message bot-message" role="button" style="display: none;">Comunícate con el remitente de tu correo, ya que desconocemos el origen de tu inscripción.</div>
-            <div id="infcorreono2" class="message bot-message" role="button" style="display: none;">Te recomendamos acercarte a tu área de capacitación.</div>
-            <a id="fin4" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Se solucionó ✔️</a><br><br>
-            <a id="regresar4" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;" >Regresar al MENÚ↩️</a>
-            <a id="correosi" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarInfCorreoSi()">Es correcto ✔️</a>
-            <div id="infcorreosi" class="message bot-message" style="display: none;">⚠️Te recordamos teclear correctamente tu usuario y contraseña (no copiar y pegar).⚠️<a id="efectobtn" href="https://sicaviqa.imss.gob.mx/" class="btn btn-custom-color btn-block" role="button" target="_blank">Ingreso - SICAVI</a></div>
-            <div id="infcorreosi2" class="message bot-message" style="display: none;">Verificar la fecha que indica tu invitación, si esta pasa del mes indicado tu usuario y contraseña dejarán de funcionar.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostarDonde()">¿Dónde?</a></div>
-            <div id="cuartaimg" class="message bot-message" style="display: none;"><img id="cuartaimg" src='../data/img/Imagen16.png' alt='Cuarta Imagen del chatbot'></div>
-            <a id="otromes" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarInfOtromes()">Es de otro mes ❌</a><br><br>
-            <a id="estoyenfecha" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarReportar()">Estoy en fecha ✔️</a>
-            <div id="infotrommes" class="message bot-message" style="display: none;">⚠️Tendrás que inscribirte para el siguiente periodo.⚠️</div>
-            <div id="infotrommes2" class="message bot-message" style="display: none;">📝 Para inscribirte:<a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">👉haz clic aquí</a></div>
-            <div id="infacceso3" class="message bot-message" style="display: none;">Verificar que estés inscrito a ese curso.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button">¿Cómo?</a></div>
-            <div id="hazclicaqui2" class="message bot-message" style="display: none;">Ve a tu perfil en la esquina superior derecha, da clic en "PERFIL" luego baja con el cursor hasta visualizar "Detalles del curso" y ahí vendrá el nombre y ruta de los cursos a los que estás inscrito.</div>
-            <img class="message bot-message" style="display: none;" id="quintaimg" src="../data/img/Imagen12.png" alt="Quinta Imagen">
-            <img class="message bot-message" style="display: none;" id="sextaimg" src="../data/img/Imagen11.png" alt="Sexta Imagen">
-            <a id="fin5" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Se solucionó ✔️</a><br><br>
-            <a id="regresar5" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Tengo otro problema↩️</a>
-            <div id="hazclicaqui3" class="message bot-message" style="display: none;">Te recordamos que los usuarios y contraseñas no pueden reestablecerse, estos son únicos por cada inscripción.</div>
-            <a id="todaviaayuda" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarReportar()">Aún necesito ayuda</a>
-            <div id="evaluacion" class="message bot-message" style="display: none;">▶️ Se acabaron mis intentos. 👀<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarHazClicAqui4()">👉haz clic aquí</a></div>
-            <div id="evaluacio2" class="message bot-message" style="display: none;">▶️ Ya hice mis evaluaciones y no puedo obtener mi constancia. 📜<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarHazClicAqui5()">👉haz clic aquí</a></div>
-            <div id="evaluacion3" class="message bot-message" style="display: none;">▶️ Estaba realizando mi evaluación y ... 
+            <div id="hazclicaqui2" class="message bot-message delay-23" style="display: none;">Ve a tu perfil en la esquina superior derecha, da clic en "PERFIL" luego baja con el cursor hasta visualizar "Detalles del curso" y ahí vendrá el nombre y ruta de los cursos a los que estás inscrito.</div>
+            <img class="message bot-message delay-24" style="display: none;" id="quintaimg" src="../data/img/Imagen12.png" alt="Quinta Imagen">
+            <img class="message bot-message delay-25" style="display: none;" id="sextaimg" src="../data/img/Imagen11.png" alt="Sexta Imagen">
+            <div id="hazclicaqui3" class="message bot-message delay-26" style="display: none;">Te recordamos que los usuarios y contraseñas no pueden reestablecerse, estos son únicos por cada inscripción.</div>
+            <div id="respuestasi3" class="message bot-message delay-27" style="display: none;">Verifica que ya sea el mes en el que llegará tu correo de invitación para tu capacitación.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarFechas()" >¿Dónde?</a></div>
+            <div id="evaluacion" class="message bot-message delay-28" style="display: none;">▶️ Se acabaron mis intentos. 👀<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarHazClicAqui4()">👉haz clic aquí</a></div>
+            <div id="evaluacio2" class="message bot-message delay-29" style="display: none;">▶️ Ya hice mis evaluaciones y no puedo obtener mi constancia. 📜<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarHazClicAqui5()">👉haz clic aquí</a></div>
+            <div id="evaluacion3" class="message bot-message delay-30" style="display: none;">▶️ Estaba realizando mi evaluación y ... 
             <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarCerradoAccidente()">😨Cerre por accidente</a>
             <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarSefueLuz()">😭Se fué la luz</a>
             <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarYaEstabaResuelto()">🤔Ya estaba resuelto</a></div>
-            <div id="hazclicaqui4" class="message bot-message" style="display: none;">Cuando acabas con todos tus intentos y ninguno fue aprobatorio, la única solución para obtener la constancia del curso es volverse a inscribir a este, y podrás realizar nuevamente tu capacitación en el próximo periodo.</div>
-            <div id="hazclicaqui4.1" class="message bot-message" style="display: none;">Si quieres inscribirte, da clic aquí. 👇<a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">Formulario</a></div>
-            <div id="hazclicaqui4.2" class="message bot-message" style="display: none;">Me volví a inscribir, pero me siguen apareciendo los intentos de mi evaluación pasada. ☹️<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarReportar()">👉haz clic aquí</a></div>
-            <div id="hazclicaqui5" class="message bot-message" style="display: none;">Tienes que comprobar si tu calificación es aprobatoria, ✅ esto varía dependiendo el curso, por lo general es 7 u 8.<br>🔎Lo puedes comprobar en las instrucciones de tu curso.</div>
-            <div id="hazclicaqui5.1" class="message bot-message" style="display: none;">⚠️Tengo calificación aprobatoria y no puedo obtener la constancia.⚠️<a id="efectobtn" class="btn btn-custom-color btn-block" role="button"  onclick="mostrarHazClicAqui6()">👉haz clic aquí</a></div>
-            <div id="hazclicaqui6" class="message bot-message" style="display: none;">Te recordamos verificar la fecha 📆 de tu curso, ya que la constancia no podrá imprimirse si el periodo concluyó, ❌ aunque se haya obtenido una calificación aprobatoria.<br>⚠️Imprime tu constancia al concluir tu capacitación no lo dejes para después. ⚠️</div>
-            <a id="regresar6" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Mi problema es otro↩️</a><br><br>
-            <a id="fin6" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Resolví mi duda😀</a>
-            <div id="cerradoaccidente" class="message bot-message" style="display: none;">Si la plataforma cierra por accidente, el internet es intermitente o se desconecta el equipo no generará ningún problema.<br>🛡️Tu avance está seguro, este no contará ningún intento y podrás retomar tu examen desde el punto donde te quedaste.</div>
-            <a id="regresar7" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Mi problema es otro↩️</a><br><br>
-            <a id="fin7" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Resolví mi duda😀</a>
-            <div id="sefueluz" class="message bot-message" style="display: none;">Si la plataforma cierra por accidente, el internet es intermitente o se desconecta el equipo no generará ningún problema.<br>🛡️Tu avance está seguro, este no contará ningún intento y podrás retomar tu examen desde el punto donde te quedaste.</div>
-            <a id="regresar8" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Mi problema es otro↩️</a><br><br>
-            <a id="fin8" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Resolví mi duda😀</a>
-            <div id="yaestabaresulto" class="message bot-message" style="display: none;">Recuerda que eres responsable de resguardar tu información, no la compartas con nadie y no dejes que un tercero realice tu curso.<br>🚨Si crees que eres víctima de robo de identidad da clic aquí.🚨<a id="efectobtn" class="btn btn-custom-color btn-block" role="button"  onclick="mostrarReportar()">Reportar</a></div>
-            
+            <div id="hazclicaqui4" class="message bot-message delay-31" style="display: none;">Cuando acabas con todos tus intentos y ninguno fue aprobatorio, la única solución para obtener la constancia del curso es volverse a inscribir a este, y podrás realizar nuevamente tu capacitación en el próximo periodo.</div>
+            <div id="hazclicaqui4.1" class="message bot-message delay-32" style="display: none;">Si quieres inscribirte, da clic aquí. 👇<a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">Formulario</a></div>
+            <div id="hazclicaqui4.2" class="message bot-message delay-33" style="display: none;">Me volví a inscribir, pero me siguen apareciendo los intentos de mi evaluación pasada. ☹️<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarReportar()">👉haz clic aquí</a></div>
+             <div id="hazclicaqui5" class="message bot-message delay-34" style="display: none;">Tienes que comprobar si tu calificación es aprobatoria, ✅ esto varía dependiendo el curso, por lo general es 7 u 8.<br>🔎Lo puedes comprobar en las instrucciones de tu curso.</div>
+            <div id="hazclicaqui5.1" class="message bot-message delay-35" style="display: none;">⚠️Tengo calificación aprobatoria y no puedo obtener la constancia.⚠️<a id="efectobtn" class="btn btn-custom-color btn-block" role="button"  onclick="mostrarHazClicAqui6()">👉haz clic aquí</a></div>
+             <div id="hazclicaqui6" class="message bot-message delay-36" style="display: none;">Te recordamos verificar la fecha 📆 de tu curso, ya que la constancia no podrá imprimirse si el periodo concluyó, ❌ aunque se haya obtenido una calificación aprobatoria.<br>⚠️Imprime tu constancia al concluir tu capacitación no lo dejes para después. ⚠️</div>
+            <div id="cerradoaccidente" class="message bot-message delay-37" style="display: none;">Si la plataforma cierra por accidente, el internet es intermitente o se desconecta el equipo no generará ningún problema.<br>🛡️Tu avance está seguro, este no contará ningún intento y podrás retomar tu examen desde el punto donde te quedaste.</div>
+            <div id="sefueluz" class="message bot-message delay-38" style="display: none;">Si la plataforma cierra por accidente, el internet es intermitente o se desconecta el equipo no generará ningún problema.<br>🛡️Tu avance está seguro, este no contará ningún intento y podrás retomar tu examen desde el punto donde te quedaste.</div>
+            <div id="yaestabaresulto" class="message bot-message delay-39" style="display: none;">Recuerda que eres responsable de resguardar tu información, no la compartas con nadie y no dejes que un tercero realice tu curso.<br>🚨Si crees que eres víctima de robo de identidad da clic aquí.🚨<a id="efectobtn" class="btn btn-custom-color btn-block" role="button"  onclick="mostrarReportar()">Reportar</a></div>
+            <div id="quehagoinvitacion3" class="message bot-message delay-40" style="display: none;">Deberás tomar el curso y si tienes alguna duda, acércate a tu normativa de capacitación ya que ellos solicitaron inscribirte.</div>
+            <div id="acceso" class="message bot-message delay-41" style="display: none;">Te recordamos que estos cursos únicamente son para la plataforma institucional SICAVI-QA.<a id="efectobtn" href="https://sicaviqa.imss.gob.mx/" class="btn btn-custom-color btn-block" role="button" target="_blank">SICAVI</a></div>
+            <div id="acceso2" class="message bot-message delay-42" style="display: none;">▶️ No funciona mi usuario y contraseña.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarHazClicAqui()">👉haz clic aquí</a></div>
+            <div id="acceso3" class="message bot-message delay-43" style="display: none;">▶️ No puedo entrar a mi curso.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarHazClicAqui2()">👉haz clic aquí</a></div>
+            <div id="acceso4" class="message bot-message delay-44" style="display: none;">▶️ Quiero restablecer mi usuario y contraseña.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarHazClicAqui3()">👉haz clic aquí</a></div>
+            <div id="hazclicaqui" class="message bot-message delay-45" style="display: none;">Tus datos para accesar son enviados a través del correo: avisos.capacitacion@imss.gob.mx<img id="terceraimg" src='../data/img/Imagen14.png' alt='Tercera Imagen del chatbot' ></div>
+            <a id="correono"  class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarInfCorreoNo()">El correo es otro ❌</a><br><br>
+            <div id="infcorreono" class="message bot-message delay-46" role="button" style="display: none;">Comunícate con el remitente de tu correo, ya que desconocemos el origen de tu inscripción.</div>
+            <div id="infcorreono2" class="message bot-message delay-47" role="button" style="display: none;">Te recomendamos acercarte a tu área de capacitación.</div>
+            <a id="correosi" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarInfCorreoSi()">Es correcto ✔️</a>
+            <div id="infcorreosi" class="message bot-message delay-48" style="display: none;">⚠️Te recordamos teclear correctamente tu usuario y contraseña (no copiar y pegar).⚠️<a id="efectobtn" href="https://sicaviqa.imss.gob.mx/" class="btn btn-custom-color btn-block" role="button" target="_blank">Ingreso - SICAVI</a></div>
+            <div id="infcorreosi2" class="message bot-message delay-49" style="display: none;">Verificar la fecha que indica tu invitación, si esta pasa del mes indicado tu usuario y contraseña dejarán de funcionar.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostarDonde()">¿Dónde?</a></div>
+            <div id="cuartaimg" class="message bot-message delay-50" style="display: none;"><img id="cuartaimg" src='../data/img/Imagen16.png' alt='Cuarta Imagen del chatbot'></div>
+            <a id="otromes" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarInfOtromes()">Es de otro mes ❌</a><br><br>
+            <a id="estoyenfecha" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarReportar()">Estoy en fecha ✔️</a>
+            <div id="infotrommes" class="message bot-message delay-51" style="display: none;">⚠️Tendrás que inscribirte para el siguiente periodo.⚠️</div>
+            <div id="infotrommes2" class="message bot-message delay-52" style="display: none;">📝 Para inscribirte:<a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">👉haz clic aquí</a></div>
+            <div id="infacceso3" class="message bot-message delay-53" style="display: none;">Verificar que estés inscrito a ese curso.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button">¿Cómo?</a></div>
+            <a id="todaviaayuda" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarReportar()">Aún necesito ayuda</a>
+            <a id="regresar" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Mi problema es otro↩️</a><br><br>
+            <a id="fin" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Resolví mi duda😀</a>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-        // Función para enviar mensajes iniciales del chatbot
-        function sendInitialMessages() {
-            
-            var chatbox = document.getElementById("chatbox");
-
-            initialMessages.forEach(function(message) {
-                chatbox.innerHTML += "<div class='message bot-message'>" + message + "</div>";
-            });
-
-            // Desplazarse hasta el final del chat
-            chatbox.scrollTop = chatbox.scrollHeight;
-        }
-
-        // Llamada a la función cuando se carga la página
-        window.onload = function() {
-            sendInitialMessages();
-        }
-    </script>
 <script>
     function mostrarInscripcionInfo() {
-        
         document.getElementById('chatbox').style.display = 'none';
-        
-        
         document.getElementById('como-inscribirme').style.display = 'block';
         document.getElementById('como-inscribirme2').style.display = 'block';
         document.getElementById('como-inscribirme3').style.display = 'block';
-
-       
         document.getElementById('regresar').style.display = 'block';
+        document.getElementById('fin').style.display  = 'block';
     }
-
+</script>
+<script>
     function regresarAlMenu() {
         document.getElementById('chatbox').style.display = 'block';
         document.getElementById('como-inscribirme').style.display = 'none';
@@ -173,53 +132,37 @@
         document.getElementById('fechas2').style.display = 'none';
         document.getElementById('fechas3').style.display = 'none';
         document.getElementById('fechas4').style.display = 'none';
-        document.getElementById('regresar2').style.display = 'none';
         document.getElementById('fin').style.display = 'none';
         document.getElementById('septimaimg').style.display = 'none';
         document.getElementById('reportar').style.display = 'none';
-        document.getElementById('fin2').style.display = 'none';
-        document.getElementById('regresar3').style.display = 'none';
         document.getElementById('hazclicaqui2').style.display = 'none';
         document.getElementById('quintaimg').style.display = 'none';
         document.getElementById('sextaimg').style.display = 'none';
-        document.getElementById('fin5').style.display = 'none';
-        document.getElementById('regresar5').style.display = 'none';
         document.getElementById('hazclicaqui6').style.display = 'none';
-        document.getElementById('regresar6').style.display = 'none';
-        document.getElementById('fin6').style.display = 'none';
         document.getElementById('cerradoaccidente').style.display = 'none';
-        document.getElementById('regresar7').style.display = 'none';
-        document.getElementById('fin7').style.display = 'none';
         document.getElementById('sefueluz').style.display = 'none';
-        document.getElementById('regresar8').style.display = 'none';
-        document.getElementById('fin8').style.display = 'none';
         document.getElementById('quehago').style.display = 'none';
         document.getElementById('quehago2').style.display = 'none';
-        document.getElementById('regresar9').style.display = 'none';
         document.getElementById('infotrommes').style.display = 'none';
         document.getElementById('infotrommes2').style.display = 'none';
-        document.getElementById('fin9').style.display = 'none';
-        document.getElementById('regresar9').style.display = 'none';
         document.getElementById('infcorreono').style.display = 'none';
         document.getElementById('infcorreono2').style.display = 'none';
-        document.getElementById('fin4').style.display = 'none';
-        document.getElementById('regresar4').style.display = 'none';
-        document.getElementById('fin10').style.display = 'none';
+        document.getElementById('resuelto').style.display = 'none';
+        document.getElementById('invitacion').style.display = 'none';
+        document.getElementById('invitacion2').style.display = 'none';
+        document.getElementById('invitacion3').style.display = 'none';
+        document.getElementById('quehagoinvitacion3').style.display = 'none';
     }
-    
 </script>
-
 <script>
        function mostrarFechas() {
         document.getElementById('chatbox').style.display = 'none';
-
         document.getElementById('fechas').style.display = 'block';
         document.getElementById('fechas2').style.display = 'block';
         document.getElementById('fechas3').style.display = 'block';
         document.getElementById('fechas4').style.display = 'block';
         document.getElementById('fin').style.display = 'block';
-        document.getElementById('regresar2').style.display = 'block';
-
+        document.getElementById('regresar').style.display = 'block';
         document.getElementById('respuestasi').style.display = 'none';
         document.getElementById('respuestasi2').style.display = 'none';
         document.getElementById('respuestasi3').style.display = 'none';
@@ -227,25 +170,17 @@
 </script>
 <script>
     function mostrarQueHago() {
-        // Oculta la sección de fechas
         document.getElementById('fechas').style.display = 'none';
         document.getElementById('fechas2').style.display = 'none';
         document.getElementById('fechas3').style.display = 'none';
         document.getElementById('fechas4').style.display = 'none';
-
-        // Muestra la sección de "¿Qué hago?"
         document.getElementById('quehago').style.display = 'block';
         document.getElementById('quehago2').style.display = 'block';
-        document.getElementById('regresar9').style.display = 'block';
-        document.getElementById('fin10').style.display = 'block';
-
-        document.getElementById('regresar2').style.display = 'none';
-        document.getElementById('fin').style.display ='none';
+        document.getElementById('regresar').style.display = 'block';
+        document.getElementById('fin').style.display = 'block';
+        document.getElementById('quehagoinvitacion').style.display = 'none';
         document.getElementById('si').style.display = 'none';
         document.getElementById('no').style.display = 'none';
-        document.getElementById('quehagoinvitacion').style.display = 'none';
-
-
     }
 </script>
 <script>
@@ -254,74 +189,44 @@
         document.getElementById('fechas2').style.display = 'none';
         document.getElementById('fechas3').style.display = 'none';
         document.getElementById('fechas4').style.display = 'none';
-       
         document.getElementById('resuelto').style.display = 'block';
-        document.getElementById('octavaimg').style.display = 'block';
-
         document.getElementById('reportar').style.display = 'none';
-        document.getElementById('fin2').style.display = 'none';
-        document.getElementById('regresar3').style.display = 'none';
+        document.getElementById('fin').style.display = 'none';
+        document.getElementById('regresar').style.display = 'block';
         document.getElementById('quehagoinvitacion3').style.display = 'none';
-        document.getElementById('fin3').style.display= 'none';
-
         document.getElementById('infcorreono').style.display = 'none';
         document.getElementById('infcorreono2').style.display = 'none';
-        document.getElementById('fin4').style.display = 'none';
-        document.getElementById('regresar4').style.display = 'none';
-
-          document.getElementById('hazclicaqui2').style.display = 'none';
+        document.getElementById('hazclicaqui2').style.display = 'none';
         document.getElementById('quintaimg').style.display = 'none';
         document.getElementById('sextaimg').style.display = 'none';
-        document.getElementById('fin5').style.display = 'none';
-        document.getElementById('regresar5').style.display = 'none';
-
         document.getElementById('hazclicaqui6').style.display = 'none';
-        document.getElementById('fin6').style.display = 'none';
-        document.getElementById('regresar6').style.display = 'none';
-
         document.getElementById('cerradoaccidente').style.display = 'none';
-        document.getElementById('fin7').style.display = 'none';
-        document.getElementById('regresar7').style.display = 'none';
-
         document.getElementById('sefueluz').style.display = 'none';
-        document.getElementById('fin8').style.display = 'none';
-        document.getElementById('regresar8').style.display = 'none';
-
-        document.getElementById('regresar2').style.display = 'none';
-        document.getElementById('fin').style.display = 'none';
-
         document.getElementById('septimaimg').style.display = 'none';
-
         document.getElementById('infotrommes').style.display = 'none';
         document.getElementById('infotrommes2').style.display = 'none';
-        document.getElementById('fin9').style.display = 'none';
-        document.getElementById('regresar9').style.display = 'none';
-        document.getElementById('fin10').style.display = 'none';
-
         document.getElementById('infcorreono').style.display = 'none';
         document.getElementById('infcorreono2').style.display = 'none';
-        document.getElementById('fin4').style.display = 'none';
-        document.getElementById('regresar4').style.display = 'none';
-
         document.getElementById('quehago').style.display = 'none';
         document.getElementById('quehago2').style.display = 'none';
-
         document.getElementById('infcorreono').style.display = 'none';
         document.getElementById('infcorreono2').style.display = 'none';
-        document.getElementById('fin4').style.display = 'none';
-        document.getElementById('regresar4').style.display = 'none';
-
-
-
+        document.getElementById('como-inscribirme').style.display = 'none';
+        document.getElementById('como-inscribirme2').style.display = 'none';
+        document.getElementById('como-inscribirme3').style.display = 'none';
+        document.getElementById('invitacion').style.display = 'none';
+        document.getElementById('invitacion2').style.display = 'none';
+        document.getElementById('invitacion3').style.display = 'none';
     }
 </script>
 <script>
     function mostrarInvitacion(){
         document.getElementById('chatbox').style.display = 'none';
-
         document.getElementById('invitacion').style.display = 'block';
         document.getElementById('invitacion2').style.display = 'block';
         document.getElementById('invitacion3').style.display = 'block';
+        document.getElementById('fin').style.display = 'block';
+        document.getElementById('regresar').style.display = 'block';
     }
 </script>
 <script>
@@ -329,11 +234,11 @@
         document.getElementById('invitacion').style.display = 'none';
         document.getElementById('invitacion2').style.display = 'none';
         document.getElementById('invitacion3').style.display = 'none';
-
         document.getElementById('si').style.display = 'block';
         document.getElementById('no').style.display = 'block';
         document.getElementById('quehagoinvitacion').style.display = 'block';
-
+        document.getElementById('fin').style.display = 'none';
+        document.getElementById('regresar').style.display = 'none';
     }
 </script>
 <script>
@@ -341,16 +246,13 @@
         document.getElementById('si').style.display = 'none';
         document.getElementById('no').style.display = 'none';
         document.getElementById('quehagoinvitacion').style.display = 'none';
-
-         document.getElementById('respuestasi').style.display = 'block';
-         document.getElementById('respuestasi2').style.display = 'block';
-         document.getElementById('respuestasi3').style.display = 'block';
-
-         document.getElementById('infcorreono').style.display = 'none';
+        document.getElementById('respuestasi').style.display = 'block';
+        document.getElementById('respuestasi2').style.display = 'block';
+        document.getElementById('respuestasi3').style.display = 'block';
+        document.getElementById('infcorreono').style.display = 'none';
         document.getElementById('infcorreono2').style.display = 'none';
-        document.getElementById('fin4').style.display = 'none';
-        document.getElementById('regresar4').style.display = 'none';
-
+        document.getElementById('fin').style.display = 'none';
+        document.getElementById('regresar').style.display = 'none';
     }
 </script>
 <script>
@@ -358,33 +260,25 @@
         document.getElementById('invitacion').style.display = 'none';
         document.getElementById('invitacion2').style.display = 'none';
         document.getElementById('invitacion3').style.display = 'none';
-
         document.getElementById('reportar').style.display = 'block';
-        document.getElementById('fin2').style.display = 'block';
-        document.getElementById('regresar3').style.display = 'block';
+        document.getElementById('fin').style.display = 'block';
+        document.getElementById('regresar').style.display = 'block';
         document.getElementById('septimaimg').style.display = 'block';
-
-
         document.getElementById('cuartaimg').style.display = 'none';
         document.getElementById('otromes').style.display = 'none';
         document.getElementById('estoyenfecha').style.display = 'none';
-
         document.getElementById('hazclicaqui3').style.display = 'none';
         document.getElementById('todaviaayuda').style.display = 'none';
-
         document.getElementById('hazclicaqui4').style.display = 'none';
         document.getElementById('hazclicaqui4.1').style.display = 'none';
         document.getElementById('hazclicaqui4.2').style.display = 'none';
-
         document.getElementById('yaestabaresulto').style.display = 'none';
-
     }
 </script>
 <script>
     function mostrarQueHagoInvitacion3(){
         document.getElementById('quehagoinvitacion3').style.display = 'block';
-        document.getElementById('fin3').style.display= 'block'
-
+        document.getElementById('fin').style.display= 'block';
         document.getElementById('invitacion').style.display = 'none';
         document.getElementById('invitacion2').style.display = 'none';
         document.getElementById('invitacion3').style.display = 'none';
@@ -393,12 +287,10 @@
 <script>
     function mostrarAcceso(){
         document.getElementById('chatbox').style.display = 'none';
-
         document.getElementById('acceso').style.display = 'block';
         document.getElementById('acceso2').style.display = 'block';
         document.getElementById('acceso3').style.display = 'block';
         document.getElementById('acceso4').style.display = 'block';
-
     }
 </script>
 <script>
@@ -407,12 +299,9 @@
         document.getElementById('acceso2').style.display = 'none';
         document.getElementById('acceso3').style.display = 'none';
         document.getElementById('acceso4').style.display = 'none';
-
-
         document.getElementById('hazclicaqui').style.display = 'block';
         document.getElementById('correosi').style.display = 'block';
         document.getElementById('correono').style.display = 'block';
-        
         }
 </script>
 <script>
@@ -420,11 +309,10 @@
         document.getElementById('hazclicaqui').style.display = 'none';
         document.getElementById('correosi').style.display = 'none';
         document.getElementById('correono').style.display = 'none';
-
         document.getElementById('infcorreono').style.display = 'block';
         document.getElementById('infcorreono2').style.display = 'block';
-        document.getElementById('fin4').style.display = 'block';
-        document.getElementById('regresar4').style.display = 'block';
+        document.getElementById('fin').style.display = 'block';
+        document.getElementById('regresar').style.display = 'block';
     }
 </script>
 <script>
@@ -432,7 +320,6 @@
         document.getElementById('hazclicaqui').style.display = 'none';
         document.getElementById('correosi').style.display = 'none';
         document.getElementById('correono').style.display = 'none';
-
         document.getElementById('infcorreosi').style.display = 'block';
         document.getElementById('infcorreosi2').style.display = 'block';
     }
@@ -441,11 +328,9 @@
     function mostarDonde(){
         document.getElementById('infcorreosi').style.display = 'none';
         document.getElementById('infcorreosi2').style.display = 'none';
-
         document.getElementById('cuartaimg').style.display = 'block';
         document.getElementById('otromes').style.display = 'block';
         document.getElementById('estoyenfecha').style.display = 'block';
-        
     }
 </script>
 <script>
@@ -453,12 +338,10 @@
         document.getElementById('cuartaimg').style.display = 'none';
         document.getElementById('otromes').style.display = 'none';
         document.getElementById('estoyenfecha').style.display = 'none';
-
         document.getElementById('infotrommes').style.display = 'block';
         document.getElementById('infotrommes2').style.display = 'block';
-        ddocument.getElementById('regresar9').style.display = 'block';
-        document.getElementById('fin10').style.display = 'block';
-        
+        document.getElementById('fin').style.display = 'block';
+        document.getElementById('regresar').style.display = 'block';
     }
 </script>
 <script>
@@ -467,13 +350,11 @@
         document.getElementById('acceso2').style.display = 'none';
         document.getElementById('acceso3').style.display = 'none';
         document.getElementById('acceso4').style.display = 'none';
-
         document.getElementById('hazclicaqui2').style.display = 'block';
         document.getElementById('quintaimg').style.display = 'block';
         document.getElementById('sextaimg').style.display = 'block';
-        document.getElementById('fin5').style.display = 'block';
-        document.getElementById('regresar5').style.display = 'block';
-
+        document.getElementById('fin').style.display = 'block';
+        document.getElementById('regresar').style.display = 'block';
     }
 </script>
 <script>
@@ -482,8 +363,6 @@
         document.getElementById('acceso2').style.display = 'none';
         document.getElementById('acceso3').style.display = 'none';
         document.getElementById('acceso4').style.display = 'none';
-
-
         document.getElementById('hazclicaqui3').style.display = 'block';
         document.getElementById('todaviaayuda').style.display = 'block';
     }
@@ -491,7 +370,6 @@
 <script>
     function mostrarEvaluacion(){
         document.getElementById('chatbox').style.display = 'none';
-
         document.getElementById('evaluacion').style.display = 'block';
         document.getElementById('evaluacio2').style.display = 'block';
         document.getElementById('evaluacion3').style.display = 'block';
@@ -502,7 +380,6 @@
         document.getElementById('evaluacion').style.display = 'none';
         document.getElementById('evaluacio2').style.display = 'none';
         document.getElementById('evaluacion3').style.display = 'none';
-
         document.getElementById('hazclicaqui4').style.display = 'block';
         document.getElementById('hazclicaqui4.1').style.display = 'block';
         document.getElementById('hazclicaqui4.2').style.display = 'block';
@@ -513,7 +390,6 @@
         document.getElementById('evaluacion').style.display = 'none';
         document.getElementById('evaluacio2').style.display = 'none';
         document.getElementById('evaluacion3').style.display = 'none';
-
         document.getElementById('hazclicaqui5').style.display = 'block';
         document.getElementById('hazclicaqui5.1').style.display = 'block';
     }
@@ -522,10 +398,9 @@
     function mostrarHazClicAqui6(){
         document.getElementById('hazclicaqui5').style.display = 'none';
         document.getElementById('hazclicaqui5.1').style.display = 'none';
-
         document.getElementById('hazclicaqui6').style.display = 'block';
-        document.getElementById('fin6').style.display = 'block';
-        document.getElementById('regresar6').style.display = 'block';
+        document.getElementById('fin').style.display = 'block';
+        document.getElementById('regresar').style.display = 'block';
     }
 </script>
 <script>
@@ -533,10 +408,9 @@
         document.getElementById('evaluacion').style.display = 'none';
         document.getElementById('evaluacio2').style.display = 'none';
         document.getElementById('evaluacion3').style.display = 'none';
-
         document.getElementById('cerradoaccidente').style.display = 'block';
-        document.getElementById('fin7').style.display = 'block';
-        document.getElementById('regresar7').style.display = 'block';
+        document.getElementById('fin').style.display = 'block';
+        document.getElementById('regresar').style.display = 'block';
     }
 </script>
 <script>
@@ -544,11 +418,9 @@
         document.getElementById('evaluacion').style.display = 'none';
         document.getElementById('evaluacio2').style.display = 'none';
         document.getElementById('evaluacion3').style.display = 'none';
-
         document.getElementById('sefueluz').style.display = 'block';
-        document.getElementById('fin8').style.display = 'block';
-        document.getElementById('regresar8').style.display = 'block';
-
+        document.getElementById('fin').style.display = 'block';
+        document.getElementById('regresar').style.display = 'block';
     }
 </script>
 <script>
@@ -556,10 +428,8 @@
         document.getElementById('evaluacion').style.display = 'none';
         document.getElementById('evaluacio2').style.display = 'none';
         document.getElementById('evaluacion3').style.display = 'none';
-
         document.getElementById('yaestabaresulto').style.display = 'block';
     }
 </script>
-
 </body>
 </html>
