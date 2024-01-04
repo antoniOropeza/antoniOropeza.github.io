@@ -3,19 +3,13 @@ body {
 }
 
 #ventana-chat{
-  max-width: 800px;
+  max-width: 900px;
   margin: 20px auto;
   background-color: #DDE1E3;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-}
-
-#chatbox {
-  padding: 20px;
-  max-height: 800px;
-  overflow-y: scroll;
 }
 
 .message {
@@ -105,6 +99,7 @@ body {
     animation-delay: 2.5s;
   }
 
-  .message.delay-4,.delay-11,.delay-44 {
+  .message.delay-4,.delay-11,.delay-44,.delay-54,.delay-55{
     animation-delay: 3.5s;
   }
+

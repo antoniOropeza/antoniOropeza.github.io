@@ -6,7 +6,6 @@
     <title>ChatBot</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="../data/css/style.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </head>
 <body>
     <div id="ventana-chat" class="container-fluid">
@@ -15,10 +14,10 @@
             <div class="message bot-message delay-2">Estos son algunos de los temas con los que te puedo ayudar. 👍*Da clic en las flechas laterales para ver todas las opciones*</div>
             <div class="message bot-message delay-3"> <img id="primeimg" src='../data/img/1-01.jpg' alt='Primera Imagen del chatbot'><br> INSCRIPCION <br> 👉Recuerda utilizar el navegador Google Chrome para evitar problemas con la plataforma.👈
             <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarInscripcionInfo()">¿Cómo inscribirme? 🤔</a><br>
-            <a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">Inscríbete aquí ▶️</a><br>
+            <a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVUNkIwRkZaN1k2RDkxNDlWWkFEUEkyRE5aUS4u" class="btn btn-custom-color btn-block" role="button" target="_blank">Inscríbete aquí ▶️</a><br>
             <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarFechas()">Fechas📆</a>
             </div>
-            <div class="message bot-message delay-4"><img  id="segundaimg" src='../data/img/contraseñas.jpg' alt='Segunda Imagen del chatbot'><br> USUARIOS / CONTRASEÑAS <br>👉Es importante que sepas que el único medio válido por donde te haremos llegar tus datos de acceso es por el correo institucional:👈
+            <div class="message bot-message delay-4"><img  id="segundaimg" src='../data/img/contraseñas.jpg' alt='Segunda Imagen del chatbot'><br> USUARIOS / CONTRASEÑAS <br>👉Es importante que sepas que el único medio válido por donde te haremos llegar tus datos de acceso es por el correo institucional:👈<br>
             <a href="mailto:avisos.capacitacion@imss.gob.mx">avisos.capacitacion@imss.gob.mx</a></p>
             <a id="efectobtn" class="btn btn-custom-color btn-block " role="button" onclick="mostrarInvitacion()">Invitación 📧</a><br>
             <a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarAcceso()">Acceso 🔐</a><br>
@@ -28,7 +27,7 @@
             <div id="como-inscribirme" class="message bot-message delay-5" style="display: none;">🔴 No necesitas ingresas tu usuario ni contraseña para poder inscribirte.</div>
             <div id="como-inscribirme2" class="message bot-message delay-6" style="display: none;">Llena el formulario en su totalidad. 📝 Todos los datos son indispensables y deben ser escritos correctamente para que no sean descartado por el sistema.<br>🚩Tu CORREO es el dato más importante para poder contactarte al momento de enviarte tu usuario y contraseña.🚩</div>
             <div id="como-inscribirme3" class="message bot-message delay-7" style="display: none;">Para inscribirte, da clic aquí. 👇<br>
-            <a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">Inscríbete aquí ▶️</a><br></div>
+            <a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVUNkIwRkZaN1k2RDkxNDlWWkFEUEkyRE5aUS4u" class="btn btn-custom-color btn-block" role="button" target="_blank">Inscríbete aquí ▶️</a><br></div>
             <div id="fechas" class="message bot-message delay-8" style="display: none;" >🔴PERIODO DE INSCRIPCIÓN<br>
                 Tienes entre el 1ro y el penúltimo día de este mes para postularte a uno o hasta 4 cursos de SICAVI.</div>
             <div id="fechas2" class="message bot-message delay-9" style="display: none;">▶️ ¿CUÁNDO INICIA MI CURSO?<br>
@@ -106,8 +105,8 @@
             <div id="infotrommes2" class="message bot-message delay-52" style="display: none;">📝 Para inscribirte:<a id="efectobtn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=eGCOsKa2N063evRn0yxU5WfgkpSmrotHkm8g9t-FGFVURTgxM0RaQ1NNNTNXR1czNjBUTENRTVpYTi4u" class="btn btn-custom-color btn-block" role="button" target="_blank">👉haz clic aquí</a></div>
             <div id="infacceso3" class="message bot-message delay-53" style="display: none;">Verificar que estés inscrito a ese curso.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button">¿Cómo?</a></div>
             <a id="todaviaayuda" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarReportar()">Aún necesito ayuda</a>
-            <a id="regresar" class="btn btn-custom-color2" role="button" onclick="regresarAlMenu()" style="display: none;">Mi problema es otro↩️</a><br><br>
-            <a id="fin" class="btn btn-custom-color2" role="button" onclick="mostrarResuelto()" style="display: none;">Resolví mi duda😀</a>
+            <a id="regresar" class="btn btn-custom-color2 message bot-message delay-54" role="button" onclick="regresarAlMenu()" style="display: none;">Mi problema es otro↩️</a><br><br><br><br>
+            <a id="fin" class="btn btn-custom-color2 message bot-message delay-55" role="button" onclick="mostrarResuelto()" style="display: none;">Resolví mi duda😀</a>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
