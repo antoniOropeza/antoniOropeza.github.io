@@ -66,8 +66,8 @@
                 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ </div>
             <img class="message bot-message delay-19" style="display: none;" id="septimaimg" src="../data/img/ranarene.gif">
             <div id="invitacion3" class="message bot-message delay-20" style="display: none;">Me llegó una invitación por correo y yo no me inscribí.<a id="efectobtn" class="btn btn-custom-color btn-block" role="button" onclick="mostrarQueHagoInvitacion3()">¿Qué hago?</a></div>
-            <a id="si" class="btn btn-custom-color2" role="button" style="display: none;" onclick="mostrarRespuestaSi()">Si✔️</a><br><br>
-             <a id="no" class="btn btn-custom-color2" role="button" onclick="mostrarQueHago()" style="display: none;">No❌</a>
+            <a id="si" class="btn btn-custom-color2 message bot-message delay-56" role="button" style="display: none;" onclick="mostrarRespuestaSi()">Si✔️</a><br><br><br><br>
+             <a id="no" class="btn btn-custom-color2 message bot-message delay-57" role="button" onclick="mostrarQueHago()" style="display: none;">No❌</a>
             <div id="respuestasi" class="message bot-message delay-21" style="display: none;">Revisa el SPAM/Correo NO deseado.</div>
             <div id="respuestasi2" class="message bot-message delay-22" style="display: none;">🔐Tu usuario es tu correo electronico hasta antes del arroba.<br>
              Ejemplo;<br>
@@ -129,7 +129,7 @@
         document.getElementById('como-inscribirme3').style.display = 'block';
         document.getElementById('regresar').style.display = 'block';
         document.getElementById('fin').style.display  = 'block';
-        gtag('event', 'mostrar_inscripcion', {
+        gtag('event', 'inscripcion', {
     'event_category': 'interaccion_usuario',
     'event_label': 'Mostrar Información de Inscripción'
   });
@@ -180,7 +180,11 @@
         document.getElementById('respuestasi').style.display = 'none';
         document.getElementById('respuestasi2').style.display = 'none';
         document.getElementById('respuestasi3').style.display = 'none';
-    }
+        gtag('event', 'Fechas', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de Fechas'
+  });
+}
 </script>
 <script>
     function mostrarQueHago() {
@@ -195,7 +199,11 @@
         document.getElementById('quehagoinvitacion').style.display = 'none';
         document.getElementById('si').style.display = 'none';
         document.getElementById('no').style.display = 'none';
-    }
+        gtag('event', 'quehago_fechas', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Que hago de fechas'
+  });
+}
 </script>
 <script>
     function mostrarResuelto(){
@@ -241,7 +249,11 @@
         document.getElementById('invitacion3').style.display = 'block';
         document.getElementById('fin').style.display = 'block';
         document.getElementById('regresar').style.display = 'block';
-    }
+        gtag('event', 'invitacion', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de invitacion'
+  });
+}
 </script>
 <script>
     function mostrarQueHagoInvitacion(){
@@ -253,7 +265,11 @@
         document.getElementById('quehagoinvitacion').style.display = 'block';
         document.getElementById('fin').style.display = 'none';
         document.getElementById('regresar').style.display = 'none';
-    }
+        gtag('event', 'quehago_invitacion', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar quehago invitacion'
+  });
+}
 </script>
 <script>
     function mostrarRespuestaSi(){
@@ -287,7 +303,11 @@
         document.getElementById('hazclicaqui4.1').style.display = 'none';
         document.getElementById('hazclicaqui4.2').style.display = 'none';
         document.getElementById('yaestabaresulto').style.display = 'none';
-    }
+        gtag('event', 'Reportar', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de reporte'
+  });
+}
 </script>
 <script>
     function mostrarQueHagoInvitacion3(){
@@ -296,7 +316,11 @@
         document.getElementById('invitacion').style.display = 'none';
         document.getElementById('invitacion2').style.display = 'none';
         document.getElementById('invitacion3').style.display = 'none';
-    }
+        gtag('event', 'quehago invitacion por correo', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar quehago invitacion por correo'
+  });
+}
 </script>
 <script>
     function mostrarAcceso(){
@@ -305,7 +329,11 @@
         document.getElementById('acceso2').style.display = 'block';
         document.getElementById('acceso3').style.display = 'block';
         document.getElementById('acceso4').style.display = 'block';
-    }
+        gtag('event', 'Acceso', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de acceso'
+  });
+}
 </script>
 <script>
     function mostrarHazClicAqui(){
@@ -316,7 +344,11 @@
         document.getElementById('hazclicaqui').style.display = 'block';
         document.getElementById('correosi').style.display = 'block';
         document.getElementById('correono').style.display = 'block';
-        }
+        gtag('event', 'no funciona mi usuario y contraseña', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de no funciona mi usuario'
+  });
+}
 </script>
 <script>
     function mostrarInfCorreoNo(){
@@ -369,7 +401,11 @@
         document.getElementById('sextaimg').style.display = 'block';
         document.getElementById('fin').style.display = 'block';
         document.getElementById('regresar').style.display = 'block';
-    }
+        gtag('event', 'No puedo entrar a mi curso', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de no puedo entrar a mi curso'
+  });
+}
 </script>
 <script>
     function mostrarHazClicAqui3(){
@@ -379,7 +415,11 @@
         document.getElementById('acceso4').style.display = 'none';
         document.getElementById('hazclicaqui3').style.display = 'block';
         document.getElementById('todaviaayuda').style.display = 'block';
-    }
+        gtag('event', 'Quiero restablecer mi usuario y contraseña.', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de Quiero restablecer mi usuario y contraseña.'
+  });
+}
 </script>
 <script>
     function mostrarEvaluacion(){
@@ -387,7 +427,11 @@
         document.getElementById('evaluacion').style.display = 'block';
         document.getElementById('evaluacio2').style.display = 'block';
         document.getElementById('evaluacion3').style.display = 'block';
-    }
+        gtag('event', 'Evaluacion', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de evaluacion'
+  });
+}
 </script>
 <script>
     function mostrarHazClicAqui4(){
@@ -397,7 +441,11 @@
         document.getElementById('hazclicaqui4').style.display = 'block';
         document.getElementById('hazclicaqui4.1').style.display = 'block';
         document.getElementById('hazclicaqui4.2').style.display = 'block';
-    }
+        gtag('event', 'Se acabaron mis intentos', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de se acabaron mis intentos'
+  });
+}
 </script>
 <script>
     function mostrarHazClicAqui5(){
@@ -406,7 +454,11 @@
         document.getElementById('evaluacion3').style.display = 'none';
         document.getElementById('hazclicaqui5').style.display = 'block';
         document.getElementById('hazclicaqui5.1').style.display = 'block';
-    }
+        gtag('event', 'Ya hice mis evalueaciones y no puedo obtener mi constancia', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de ya hice mis evaluaciones.'
+  });
+}
 </script>
 <script>
     function mostrarHazClicAqui6(){
@@ -425,7 +477,11 @@
         document.getElementById('cerradoaccidente').style.display = 'block';
         document.getElementById('fin').style.display = 'block';
         document.getElementById('regresar').style.display = 'block';
-    }
+        gtag('event', 'Cerrado por accidente', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de cerrado por accidente'
+  });
+}
 </script>
 <script>
     function mostrarSefueLuz(){
@@ -435,7 +491,11 @@
         document.getElementById('sefueluz').style.display = 'block';
         document.getElementById('fin').style.display = 'block';
         document.getElementById('regresar').style.display = 'block';
-    }
+        gtag('event', 'Se fue la luz', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de se fue la luz.'
+  });
+}
 </script>
 <script>
     function mostrarYaEstabaResuelto(){
@@ -443,7 +503,11 @@
         document.getElementById('evaluacio2').style.display = 'none';
         document.getElementById('evaluacion3').style.display = 'none';
         document.getElementById('yaestabaresulto').style.display = 'block';
-    }
+        gtag('event', 'Ya estaba resuelto', {
+    'event_category': 'interaccion_usuario',
+    'event_label': 'Mostrar Información de ya estaba resuelto'
+  });
+}
 </script>
 </body>
 </html>
