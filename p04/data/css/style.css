@@ -51,35 +51,6 @@ color:white
     cursor: pointer;
 }
 
-#maquina{
-    width: 700px;
-    height: 700px;
-    margin-left: 600px;
-    margin-top: -600px;
-}
-
-#palabradivinar {
-  height: 6em;
-  margin-top: -220px;
-  justify-content: center;
-  
-}
-
-#palabradivinar span{
-        vertical-align: bottom;
-        font-size: 2em;
-        border-bottom: 2px solid black;
-        margin-right: 3px;
-        display: inline-block;
-        z-index: 2;
-        width: 30px;
-        text-align: center;
-}
-
-.maquina p{
-  margin-bottom: 200px;
-}
-
 #comodin {
 display: none;
 }
@@ -150,19 +121,3 @@ display: none;
 }
 
 
-.btn-custom-color2{
-width: 40px;
-height:40px;
-font-size: 15px;
-background-color: #CCCCCC;
-border-radius: 40%;
-position: relative;
-z-index: 1;
-cursor: pointer;
-
-}
-
-#texto{
-  font-size: 30px;
-  font-family: 'Monserrat', sans-serif;
-}
